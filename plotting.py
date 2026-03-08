@@ -2,6 +2,8 @@
 Visualisation functions.
 """
 import numpy as np
+import matplotlib
+matplotlib.use("cairo")
 import matplotlib.pyplot as plt
 from config import *
 
@@ -80,7 +82,7 @@ def plot_demo_v(v_td, v_mb, save_fig=True, filename="figs/demo_v.pdf"):
 
 def plot_demo_rpe(early_rpe, mid_rpe, late_rpe, save_fig=True, filename="figs/demo_standard_td_rpe.pdf"):
     """Plot demo RPEs at early, mid, and late training (three lines, grayscale)."""
-    fig, ax = plt.subplots(figsize=(3, 3))
+    fig, ax = plt.subplots(figsize=(3.5, 3))
     colors = ['0.55', '0.35', '0.15']
     labels = ['Early', 'Mid', 'Late']
     for rpe, color, label in zip([early_rpe, mid_rpe, late_rpe], colors, labels):
