@@ -1,8 +1,8 @@
-# Dual-Process Learning Architecture
+# Dual-Process Learning Architecture — Cosyne 2026
 
-Code accompanying the manuscript: **Dopamine ramps as a normative consequence of dual process control** 
+This repository is a fork of [dopamine_ramps](https://github.com/lpriestley/dopamine_ramps), adapted to generate figures for the **Cosyne 2026** scientific poster presentation.
 
-This repository implements a dual-process learning model where model-based values are used to train model-free values. The model generates ramping RPEs during reward approach, akin to dopamine ramps during spatial navigation and related tasks.
+The original codebase implements a dual-process learning model where model-based values are used to train model-free values, producing ramping RPEs during reward approach akin to dopamine ramps observed in spatial navigation tasks. This fork modifies the plotting pipeline to produce poster-ready figures (large fonts, high contrast, simplified layouts).
 
 ## Overview
 
@@ -13,11 +13,21 @@ The codebase simulates reinforcement learning agents in track and grid environme
 - **Mikhael et al. (2022)** – Dopamine ramp dynamics under state-uncertainty manipulations
 - **Krausz et al. (2023)** – Rapid, global updates to dopamine ramps by reward outcomes
 
+## Poster-Specific Changes
+
+Figures in this fork are modified for poster presentation:
+
+- Increased font sizes for axis labels, tick marks, and titles
+- Simplified figure layouts optimised for single-panel display
+- High-resolution PDF export sized for poster panels
+
+Poster figure generation is controlled via flags in `main.py`, identical to the original repo.
+
 ## Installation
 
 ```bash
-git clone https://github.com/[username]/dopamine_ramps.git
-cd dopamine_ramps
+git clone https://github.com/lpriestley/cosyne_2026.git
+cd cosyne_2026
 python3 -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -55,12 +65,12 @@ Figures are saved to the `figs/` directory.
 ## Project Structure
 
 ```
-dopamine_ramps/
+cosyne_2026/
 ├── agents.py          # RL agents (TD, Dual-process)
 ├── environments.py    # Linear track and grid environments
 ├── episodes.py        # Episode runners for different paradigms
 ├── experiments.py     # Simulations of published studies
-├── plotting.py        # Visualisation functions
+├── plotting.py        # Visualisation functions (poster-adapted)
 ├── config.py          # Global hyperparameters
 ├── main.py            # Main entry point
 └── figs/              # Output figures
@@ -80,4 +90,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Kim, H. R., et al. (2020). A unified framework for dopamine signals across timescales. *Cell*. DOI: 10.1016/j.cell.2020.11.013
 - Mikhael, J. G., et al. (2021). The role of state uncertainty in the dynamics of dopamine *Current Biology*. DOI: 10.1016/j.cub.2022.01.025
 - Krausz, T., et al. (2023). Expectation-modulated dopamine signals. *Neuron*. DOI: 10.1016/j.neuron.2023.07.017
-
