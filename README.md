@@ -1,8 +1,6 @@
 # Dual-Process Learning Architecture — Cosyne 2026
 
-This repository is a fork of [dopamine_ramps](https://github.com/lpriestley/dopamine_ramps), adapted to generate figures for the **Cosyne 2026** scientific poster presentation.
-
-The original codebase implements a dual-process learning model where model-based values are used to train model-free values, producing ramping RPEs during reward approach akin to dopamine ramps observed in spatial navigation tasks. This fork modifies the plotting pipeline to produce poster-ready figures (large fonts, high contrast, simplified layouts).
+This repository is a fork of [dopamine_ramps](https://github.com/lpriestley/dopamine_ramps), adapted to generate figures for a **Cosyne 2026** poster presentation.
 
 ## Overview
 
@@ -13,15 +11,7 @@ The codebase simulates reinforcement learning agents in track and grid environme
 - **Mikhael et al. (2022)** – Dopamine ramp dynamics under state-uncertainty manipulations
 - **Krausz et al. (2023)** – Rapid, global updates to dopamine ramps by reward outcomes
 
-## Poster-Specific Changes
-
-Figures in this fork are modified for poster presentation:
-
-- Increased font sizes for axis labels, tick marks, and titles
-- Simplified figure layouts optimised for single-panel display
-- High-resolution PDF export sized for poster panels
-
-Poster figure generation is controlled via flags in `main.py`, identical to the original repo.
+Poster figure generation is controlled via flags in `main.py`, as per the original repo.
 
 ## Installation
 
